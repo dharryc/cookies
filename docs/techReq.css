@@ -1,0 +1,92 @@
+:root {
+    --background: hsl(249, 9%, 15%);
+    --text-color: hsl(0, 0%, 100%);
+    --blue: hsl(240, 100%, 50%);
+    --blueviolet: hsl(271, 76%, 53%);
+    --gold: hsl(51, 100%, 50%);
+    --purple: hsl(300, 100%, 25%);
+    --greenyellow: hsl(84, 100%, 59%);
+    --whitesmoke: hsl(0, 0%, 96%);
+    --red: hsl(0, 100%, 50%);
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+#imgAndAside {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    background-color: var(--blueviolet);
+    transition: .5s;
+}
+
+a:hover {
+    background-color: var(--background);
+}
+
+#nthChildStuff li:nth-child(odd) {
+    background-color: var(--blue);
+}
+
+#deleteIt {
+    background-color: var(--gold);
+    min-width: 15em;
+    min-height: 15em;
+    max-width: 15em;
+    max-height: 15em;
+}
+
+#duplicateIt{
+    display: flex;
+    overflow: scroll;
+    background-color: var(--gold);
+    min-width: 15em;
+    min-height: 15em;
+    max-width: 15em;
+    max-height: 15em;
+}
+
+.thingToDragNDrop {
+    background-color: var(--purple);
+    min-width: 10em;
+    min-height: 10em;
+    max-width: 10em;
+    max-height: 10em;
+}
+
+#imgAndAside img {
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    border: solid;
+    border-color: var(--greenyellow);
+    border-width: 2em;
+    border-style: double;
+    border-radius: 2em;
+}
+
+#formReqs {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+#reqList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#link {
+    color: var(--whitesmoke);
+}
+
+#figs img {
+    max-width: 15em;
+}
+
+#notStandard {
+    accent-color: var(--red);
+}

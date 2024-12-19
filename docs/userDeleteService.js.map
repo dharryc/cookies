@@ -1,0 +1,1 @@
+{"version":3,"file":"userDeleteService.js","sourceRoot":"","sources":["../client/src/userDeleteService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,gBAAgB,CAAC;AAEzC,MAAM,CAAC,MAAM,UAAU,GAAG,KAAK,EAAE,QAAa,EAAE,EAAE;IAChD,MAAM,KAAK,CAAC,GAAG,OAAO,SAAS,QAAQ,SAAS,EAAE;QAChD,MAAM,EAAE,QAAQ;QAChB,OAAO,EAAE;YACP,cAAc,EAAE,kBAAkB;SACnC;KACF,CAAC,CAAC;AACL,CAAC,CAAC"}
