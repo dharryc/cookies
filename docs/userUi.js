@@ -8,8 +8,8 @@ const CardMaker = (link, description, id, moreDetails) => {
     cardWrapperNode.classList.add("itemCard");
     const linkAndPriorityWrapper = document.createElement("div");
     linkAndPriorityWrapper.setAttribute("id", "priorityAndLink");
-    const priorityTag = document.createElement("div");
-    priorityTag.textContent = "Default";
+    // const priorityTag = document.createElement("div");
+    // priorityTag.textContent = "Default";
     const linkNode = document.createElement("a");
     linkNode.setAttribute("target", "_blank");
     linkNode.textContent = description;
@@ -48,7 +48,7 @@ const CardMaker = (link, description, id, moreDetails) => {
         cardWrapperNode.removeChild(descriptionSubmissionButton);
         buttonWrapper.append(deleteButton);
     });
-    linkAndPriorityWrapper.append(linkNode, priorityTag);
+    linkAndPriorityWrapper.append(linkNode);
     buttonWrapper.append(deleteButton, longerDescriptionButton);
     cardWrapperNode.append(linkAndPriorityWrapper, descriptionNode, buttonWrapper);
     contentNode?.append(cardWrapperNode);
