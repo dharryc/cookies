@@ -59,7 +59,6 @@ const CardMaker = (link, description, id, userNode, userName, purchased, moreDet
             buttonWrapper.removeChild(showDescriptionButton);
             buttonWrapper.append(hideDescription);
             descriptionNode.textContent = moreDetails;
-            console.log("there's more details" + moreDetails);
         });
         const hideDescription = document.createElement("button");
         hideDescription.classList.add("button");
@@ -85,12 +84,12 @@ const GenerateList = (familyList) => {
                 userTitle.textContent =
                     user.userName.charAt(0).toUpperCase() + user.userName.slice(1);
                 userNode.append(userTitle);
+                console.log(user);
                 if (user.birthDay != null) {
                     userNode.append(existingCountDown(user.birthDay));
                 }
                 user.items.forEach((item) => {
                     CardMaker(item.value.link, item.value.description, item.key, userNode, user.userName, item.value.purchased, item.value.moreDetails);
-                    console.log(item.value.moreDetails);
                 });
                 contentNode?.append(userNode);
             }

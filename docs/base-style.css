@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Doto:wght@100..900&family=Nosifer&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poller+One&family=Roboto:wght@100&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
     --background-color: hsl(249, 10%, 7%);
@@ -8,7 +8,7 @@
     --text-color: hsl(0, 0%, 100%);
     --link-color: hsl(194, 100%, 50%);
     color: var(--text-color);
-    font-family: "Tinos", serif;
+    font-family: "Space Grotesk", serif;
     font-size: large;
     background-color: var(--background);
     padding: 0;
@@ -84,7 +84,6 @@ button {
 }
 
 a {
-    margin-top: .5em;
     text-decoration: none;
     font-size: x-large;
 }
@@ -129,6 +128,7 @@ a:active {
 
 .purchased {
     border-style: dashed;
+    filter: blur(.2em);
 }
 
 #filterBar {
@@ -136,13 +136,12 @@ a:active {
 }
 
 .button {
-    margin-top: .25em;
+    margin-top: .5em;
     align-items: center;
     appearance: none;
     transition: background-color .2s, background-position .2s;
     position: relative;
     background-color: #0c3a5a;
-    font-family: "Tinos", serif;
     border-radius: 100px;
     display: inline-flex;
     border-width: 0;
@@ -161,6 +160,7 @@ a:active {
 
 input[type="text"],
 textarea {
+    margin-left: .5em;
     outline: none;
     font-family: "Tinos", serif;
     background-color: var(--background-input);
@@ -182,19 +182,31 @@ textarea {
     min-width: 80%;
 }
 
-#priorityAndLink{
+#priorityAndLink {
     display: flex;
     align-items: baseline;
     gap: 2em;
 }
 
-#priorityAndLink div{
+#priorityAndLink div {
     padding: .1em;
     border-radius: .5em;
     border: solid;
 }
 
-#userButtons{
-    display:flex;
+#userButtons {
+    display: flex;
     gap: .5em;
+}
+
+#title {
+    margin-top: 20vh;
+}
+
+label {
+    margin-bottom: .5em;
+}
+
+#newUserForm {
+    padding-top: 30vh;
 }

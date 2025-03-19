@@ -128,4 +128,5 @@ familyList?.setAttribute("href", `./familyListPagePrototype.html?user=${activeUs
 const userList = document.getElementById("userList");
 userList?.setAttribute("href", `./userListPagePrototype.html?user=${activeUserName}`);
 cardGenerator();
+console.log(`http://dharryc.github.io/cookies/shareList.html?user=${activeUserName}`);
 //# sourceMappingURL=userUi.js.map

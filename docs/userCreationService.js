@@ -9,6 +9,7 @@ export const makeUser = async (user) => {
     });
 };
 export const userNameVerification = async (userName) => {
+    if(userName.length < 3) return "Woah, give me a username longer than that!";
     const userNameList = await fetch(`${rootUrl}/userList`);
     const userNameObj = await userNameList.json();
     if (userNameObj.includes(userName.toLocaleLowerCase())) {
