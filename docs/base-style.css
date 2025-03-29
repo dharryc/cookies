@@ -2,7 +2,7 @@
 
 :root {
     --background-color: hsl(249, 10%, 7%);
-    --background: hsl(249, 9%, 15%);
+    --background: #2b2a33;
     --background-input: hsl(249, 9%, 60%);
     --border-for-lists: hsl(248, 22%, 28%);
     --text-color: hsl(0, 0%, 100%);
