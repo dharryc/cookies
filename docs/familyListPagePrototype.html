@@ -10,8 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <title>Family list</title>
   </head>
-  <body class="bg-dark text-light">
-    <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: #1e3a8a;">
+  <body class="bg-dark text-light vh-100 d-flex flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1e3a8a; flex-shrink: 0;">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#">
           <i class="bi bi-gift"></i> Cookies
@@ -44,6 +44,8 @@
         </div>
       </div>
     </nav>
-    <div id="pageContent" class="container"></div>
+    <div class="flex-grow-1 overflow-auto">
+      <div id="pageContent" class="container py-4"></div>
+    </div>
   </body>
 </html>
