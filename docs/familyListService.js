@@ -1,7 +1,7 @@
 import { getUserItems } from "./userService.js";
 import { rootUrl } from "./constants.js";
-export const togglePurchase = async (itemId, userName) => {
-    await fetch(`${rootUrl}/${userName}/${itemId}`);
+export const togglePurchase = async (itemId, userName, purchasingUser) => {
+    await fetch(`${rootUrl}/${userName}/${itemId}/${purchasingUser}`);
 };
 export const allUsers = async () => {
     const usersPromise = await fetch(`${rootUrl}/allUsers`);

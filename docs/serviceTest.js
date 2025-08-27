@@ -34,10 +34,35 @@ const formMaker = () => {
         ev.preventDefault();
     });
     inputButtonNode.addEventListener("click", async (ev) => {
-        await addNewItem(itemLinkNode.value, itemTitleNode.value, activeUser.userName);
-        CardMaker(itemLinkNode.value, itemTitleNode.value);
-        itemTitleNode.value = "";
-        itemLinkNode.value = "";
+        // Store original button state
+        const originalText = inputButtonNode.textContent;
+        const originalClass = inputButtonNode.className;
+        
+        // Show loading state
+        inputButtonNode.disabled = true;
+        inputButtonNode.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Adding...';
+        
+        try {
+            await addNewItem(itemLinkNode.value, itemTitleNode.value, activeUser.userName);
+            CardMaker(itemLinkNode.value, itemTitleNode.value);
+            itemTitleNode.value = "";
+            itemLinkNode.value = "";
+        } catch (error) {
+            console.error("Error adding item:", error);
+            // Show error feedback
+            inputButtonNode.textContent = "Error - Try again";
+            inputButtonNode.className = "btn btn-danger";
+            setTimeout(() => {
+                inputButtonNode.textContent = originalText;
+                inputButtonNode.className = originalClass;
+                inputButtonNode.disabled = false;
+            }, 2000);
+            return;
+        } finally {
+            // Re-enable button and restore original text
+            inputButtonNode.disabled = false;
+            inputButtonNode.textContent = originalText;
+        }
     });
     inputParentNode.append(titleLabel, itemTitleNode, linkLabel, itemLinkNode, inputButtonNode);
     formNode?.append(inputParentNode);
